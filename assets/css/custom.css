@@ -1,0 +1,13 @@
+@font-face {
+font-family: 'riogrande-striped-bold';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/riogrande-striped.woff') format('woff');
+}
+
+@font-face {
+font-family: 'duality-regular';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/duality.woff') format('woff');
+}

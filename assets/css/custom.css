@@ -11,3 +11,24 @@ font-style: normal;
 font-weight: normal;
 src: url('fonts/duality.woff') format('woff');
 }
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
+
+p {
+    font-family: 'duality-regular';
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'riogrande-striped-bold';
+    font-size: 60px;
+    color: #8A0829;
+}
+
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

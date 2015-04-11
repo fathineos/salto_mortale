@@ -16,11 +16,14 @@ function init_fullpage() {
 }
 
 function small_display() {
-    if ($(window).width() < '768') {
+    if ($(window).height() < '480') {
+        $("p").addClass("xsmall-display-font-main");
+        $("h1").addClass("xsmall-display-font-h1");
+        $("h2").addClass("xsmall-display-font-h2");
+    } else if ($(window).height() < '800') {
         $("p").addClass("small-display-font-main");
         $("h1").addClass("small-display-font-h1");
         $("h2").addClass("small-display-font-h2");
-        $("h1").removeClass("mid-top")
     }
 };
 

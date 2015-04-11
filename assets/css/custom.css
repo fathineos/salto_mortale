@@ -40,6 +40,18 @@ h2 {
     font-size: 26px;
 }
 
+.xsmall-display-font-main {
+    font-size: 12px;
+}
+
+.xsmall-display-font-h2 {
+    font-size: 18px;
+}
+
+.xsmall-display-font-h1 {
+    font-size: 22px;
+}
+
 .footer-div {
     opacity: 0.7;
     position: absolute;

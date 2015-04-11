@@ -9,7 +9,9 @@ function init_fullpage() {
     $('#fullpage').fullpage({
         anchors:['intro', 'saltomortale-1', 'saltomortale-2', 'team', 'red-tree'],
         sectionsColor: ['#F0FFFF', '#000000', '#000000', '#F5F5DC', '#000000'],
-        navigation: true
+        navigation: true,
+        fixedElements: '.footer',
+        paddingBottom: '100px'
     });
 }
 

@@ -17,73 +17,68 @@ src: url('fonts/duality.woff') format('woff');
     background-size: cover;
 }*/
 
+p, h1, h2, h3, h4, h5, h6, h7 {
+    font-family: 'duality-regular';
+}
 
 p {
-    font-family: 'duality-regular';
     font-size: 20px;
 }
 
 h1 {
-    font-family: 'riogrande-striped-bold';
     font-size: 60px;
-    color: #8A0829;
 }
-
 
 h2 {
-    font-family: 'duality-regular';
-    font-size: 60px;
+    font-size: 40px;
 }
 
-/*.section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+/*.intro {
+    background-color: #F0FFFF;
 }*/
 
-.intro {
-	background-color: #F0FFFF;
+.small-display-font-main {
+    font-size: 14px;
 }
 
-.mid-top {
-    margin-top: -300px;
+.small-display-font-h2 {
+    font-size: 20px;
+}
+
+.small-display-font-h1 {
+    font-size: 26px;
 }
 
 .mid-bottom {
-	padding-bottom: -300px;
+    padding-bottom: -300px;
 }
 
+/* sections */
 .mirror {
-	background-image: url("../img/mirror.jpg");
+    background-image: url("../img/mirror.jpg");
     background-size: cover;
-    background-color: #000000;
     background-position: 50% 20%;
     color: #FFFFFF;
 }
 
 .guillotine {
-	background-image: url("../img/guillotine.jpg");
+    background-image: url("../img/guillotine.jpg");
     background-size: cover;
-    background-color: #000000;
     background-position: 50% 80%;
     color: #FFFFFF;
 }
 
 .ropewalker {
-	/*background-image: url("../img/guillotine.jpg");*/
+    /*background-image: url("../img/guillotine.jpg");*/
     /*background-size: cover;*/
     background-color: #000000;
-    /*background-position: 50% 90%;	*/
+    /*background-position: 50% 90%; */
     color: #FFFFFF;
 }
 
-.team {
-	background-color: #F5F5DC;
-}
-
-.other_works {
+.red-tree {
     background-image: url("../img/red_tree.jpg");
     background-size: cover;
-    background-color: #000000;
     /*background-position: 50% 90%; */
     color: #FFFFFF;
 }

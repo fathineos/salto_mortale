@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+    $("nav").hide();
+    $("footer").hide();
     init_fullpage();
     small_display();
     relative_header_position();
@@ -10,6 +12,20 @@ function init_fullpage() {
         anchors:['intro', 'saltomortale-1', 'saltomortale-2', 'team', 'red-tree'],
         sectionsColor: ['#F0FFFF', '#000000', '#000000', '#F5F5DC', '#000000'],
         navigation: true,
+        afterLoad: function(anchorLink, index){
+            if(anchorLink === 'saltomortale-1' || anchorLink === 'saltomortale-2') {
+                $("nav").show();
+            } else if (anchorLink == "red-tree"){
+                $("footer").show();
+            }
+        },
+        onLeave: function(index, nextIndex, direction) {
+            if ((index == 2 || index == 3) && (nextIndex == 1 || nextIndex == 4)) {
+                $("nav").hide();
+            } else if (index == 5) {
+                $("footer").hide();
+            }
+        }
     });
 }
 

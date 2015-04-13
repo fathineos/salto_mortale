@@ -1,18 +1,18 @@
 @font-face {
-font-family: 'riogrande-striped-bold';
-font-style: normal;
-font-weight: normal;
-src: url('fonts/riogrande-striped.woff') format('woff');
+    font-family: 'riogrande-striped-bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/riogrande-striped.woff') format('woff');
 }
 
 @font-face {
-font-family: 'duality-regular';
-font-style: normal;
-font-weight: normal;
-src: url('fonts/duality.woff') format('woff');
+    font-family: 'duality-regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/duality.woff') format('woff');
 }
 
-p, h1, h2, h3, h4, h5, h6, h7, .footer-content {
+p, h1, h2, div, .footer-content {
     font-family: 'duality-regular';
 }
 
@@ -79,6 +79,18 @@ h2 {
     display: inline-block;
     vertical-align: middle;
     float: none;
+}
+
+.trailer {
+    position: absolute;
+    left: 0px;
+    bottom: 35px;
+    background-color: #fff8dc;
+    opacity: 0.7;
+    color: black;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* sections */

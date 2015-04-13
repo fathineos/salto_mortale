@@ -25,6 +25,25 @@
     <script type="text/javascript" src="assets/js/custom.js"></script>
 </head>
 <body>
+
+    <!-- modal -->
+    <div id='trailer-modal' class='modal fade'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button id="modal-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close"><span>×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row text-center">
+                            <iframe id="trailer-iframe" src="https://player.vimeo.com/video/100604694?api=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" width="550" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="fullpage">
         <div data-anchor="intro" class="section container">
             <div class="row text-center">
@@ -48,6 +67,9 @@
         <div data-anchor="saltomortale-2" class="section container text-center mirror">
             <div class="row">
                 <h1 id="relative_header-top">Salto Mortale:</br>A story in a clown's imaginary world</h1>
+            </div>
+            <div class="row">
+                <button type="button" class="trailer" data-toggle="modal" data-target="#trailer-modal" value="Watcha!"><img style="height:40px" src="assets/img/video116.png"></br>Watch trailer</button>
             </div>
         </div>
         <div data-anchor="team" class="section container">

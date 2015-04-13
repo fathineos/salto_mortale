@@ -28,6 +28,6 @@ function small_display() {
 };
 
 function relative_header_position() {
-    margin = -Math.floor($(window).height()/3)
-    $('[id^="relative_header"]').css("margin-top", margin + "px")
+    var margin = -Math.floor($(window).height()/3);
+    $('[id^="relative_header"]').css("margin-top", margin + "px");
 }

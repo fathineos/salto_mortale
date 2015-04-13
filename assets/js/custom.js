@@ -1,3 +1,15 @@
+var SECTION_INTRO = 1;
+var SECTION_SALTOMORTALE_1 = 2;
+var SECTION_SALTOMORTALE_2 = 3;
+var SECTION_TEAM = 4;
+var SECTION_REDTREE = 5;
+
+var ANCHOR_INTRO = "intro";
+var ANCHOR_SALTOMORTALE_1 = "saltomortale-1";
+var ANCHOR_SALTOMORTALE_2 = "saltomortale-2";
+var ANCHOR_TEAM = "team";
+var ANCHOR_REDTREE = "red-tree";
+
 
 $(document).ready(function() {
     $("nav").hide();
@@ -9,20 +21,21 @@ $(document).ready(function() {
 
 function init_fullpage() {
     $('#fullpage').fullpage({
-        anchors:['intro', 'saltomortale-1', 'saltomortale-2', 'team', 'red-tree'],
+        anchors:[ANCHOR_INTRO, ANCHOR_SALTOMORTALE_1, ANCHOR_SALTOMORTALE_2, ANCHOR_TEAM, ANCHOR_REDTREE],
         sectionsColor: ['#F0FFFF', '#000000', '#000000', '#F5F5DC', '#000000'],
         navigation: true,
         afterLoad: function(anchorLink, index){
-            if(anchorLink === 'saltomortale-1' || anchorLink === 'saltomortale-2') {
+            if(anchorLink === ANCHOR_SALTOMORTALE_1 || anchorLink === ANCHOR_SALTOMORTALE_2) {
                 $("nav").show();
-            } else if (anchorLink == "red-tree"){
+            } else if (anchorLink == ANCHOR_REDTREE){
                 $("footer").show();
             }
         },
         onLeave: function(index, nextIndex, direction) {
-            if ((index == 2 || index == 3) && (nextIndex == 1 || nextIndex == 4)) {
+            if ((index === SECTION_SALTOMORTALE_1 || index === SECTION_SALTOMORTALE_2) &&
+                (nextIndex === SECTION_INTRO || nextIndex === SECTION_TEAM)) {
                 $("nav").hide();
-            } else if (index == 5) {
+            } else if (index === SECTION_REDTREE) {
                 $("footer").hide();
             }
         }
@@ -30,15 +43,19 @@ function init_fullpage() {
 }
 
 function small_display() {
+    var H1 = $("h1");
+    var H2 = $("h2");
+    var P = $("p")
+
     if ($(window).height() < '480') {
-        $("p").addClass("xsmall-display-font-main");
-        $("h1").addClass("xsmall-display-font-h1");
-        $("h2").addClass("xsmall-display-font-h2");
+        P.addClass("xsmall-display-font-main");
+        H1.addClass("xsmall-display-font-h1");
+        H2.addClass("xsmall-display-font-h2");
         trailer_in_new_window();
     } else if ($(window).height() < '800') {
-        $("p").addClass("small-display-font-main");
-        $("h1").addClass("small-display-font-h1");
-        $("h2").addClass("small-display-font-h2");
+        P.addClass("small-display-font-main");
+        H1.addClass("small-display-font-h1");
+        H2.addClass("small-display-font-h2");
         trailer_in_new_window();
     } else {
         trailer_in_modal();

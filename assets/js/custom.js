@@ -12,8 +12,8 @@ var ANCHOR_REDTREE = "red-tree";
 
 
 $(document).ready(function() {
-    $("nav").hide();
-    $("footer").hide();
+    $("#footer_trailer").hide();
+    $("#footer_created_by").hide();
     init_fullpage();
     small_display();
     relative_header_position();
@@ -24,19 +24,19 @@ function init_fullpage() {
         anchors:[ANCHOR_INTRO, ANCHOR_SALTOMORTALE_1, ANCHOR_SALTOMORTALE_2, ANCHOR_TEAM, ANCHOR_REDTREE],
         sectionsColor: ['#F0FFFF', '#000000', '#000000', '#F5F5DC', '#000000'],
         navigation: true,
-        afterLoad: function(anchorLink, index){
-            if(anchorLink === ANCHOR_SALTOMORTALE_1 || anchorLink === ANCHOR_SALTOMORTALE_2) {
-                $("nav").show();
+        afterLoad: function(anchorLink, index) {
+            if (anchorLink === ANCHOR_SALTOMORTALE_1 || anchorLink === ANCHOR_SALTOMORTALE_2) {
+                $("#footer_trailer").show();
             } else if (anchorLink == ANCHOR_REDTREE){
-                $("footer").show();
+                $("#footer_created_by").show();
             }
         },
         onLeave: function(index, nextIndex, direction) {
-            if ((index === SECTION_SALTOMORTALE_1 || index === SECTION_SALTOMORTALE_2) &&
-                (nextIndex === SECTION_INTRO || nextIndex === SECTION_TEAM)) {
-                $("nav").hide();
-            } else if (index === SECTION_REDTREE) {
-                $("footer").hide();
+            if (nextIndex != SECTION_SALTOMORTALE_1 || nextIndex != SECTION_SALTOMORTALE_2) {
+                $("#footer_trailer").hide();
+            }
+            if (nextIndex != SECTION_REDTREE) {
+                $("#footer_created_by").hide();
             }
         }
     });
@@ -47,16 +47,18 @@ function small_display() {
     var H2 = $("h2");
     var P = $("p")
 
-    if ($(window).height() < '480') {
+    if ($(window).width() < '600') {
         P.addClass("xsmall-display-font-main");
         H1.addClass("xsmall-display-font-h1");
         H2.addClass("xsmall-display-font-h2");
+        $("footer").children().addClass("small-footer-div")
         trailer_in_new_window();
-    } else if ($(window).height() < '800') {
+    } else if ($(window).width() < '800') {
         P.addClass("small-display-font-main");
         H1.addClass("small-display-font-h1");
         H2.addClass("small-display-font-h2");
-        trailer_in_new_window();
+        $("footer").children().addClass("small-footer-div")
+        trailer_in_modal();
     } else {
         trailer_in_modal();
     }
